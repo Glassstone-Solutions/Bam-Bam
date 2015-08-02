@@ -17,3 +17,7 @@ pom.xml.versionsBackup
 /local.properties
 build/
 **/build/
+*.apk
+Thumbs.db
+Desktop.ini
+*.jks

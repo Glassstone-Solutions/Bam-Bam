@@ -6,7 +6,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "ng.codehaven.bambam"
+//        applicationId "ng.codehaven.bambam"
         minSdkVersion 21
         targetSdkVersion 22
         versionCode 1
@@ -16,6 +16,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            setApplicationIdSuffix(".release")
         }
     }
 }

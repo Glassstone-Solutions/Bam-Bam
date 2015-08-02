@@ -11,10 +11,25 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs{
+        releaseConfig{
+            storeFile file('bambam_key.jks');
+            storePassword("P@bopov!b234...");
+            keyAlias("Bam Bam");
+            keyPassword("Pabopovib234.");
+        }
+    }
     buildTypes {
         release {
-            minifyEnabled false
+            debuggable false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+            setApplicationIdSuffix(".release")
+        }
+        debug {
+            debuggable true
+            setApplicationIdSuffix(".debug")
         }
     }
 }

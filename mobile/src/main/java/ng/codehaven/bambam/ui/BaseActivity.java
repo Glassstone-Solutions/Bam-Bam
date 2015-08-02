@@ -12,6 +12,7 @@ import com.parse.ParseUser;
 import butterknife.ButterKnife;
 import ng.codehaven.bambam.R;
 import ng.codehaven.bambam.ui.activities.DispatchActivity;
+import ng.codehaven.bambam.utils.IntentUtil;
 import ng.codehaven.bambam.utils.Logger;
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -76,10 +77,12 @@ public abstract class BaseActivity extends AppCompatActivity {
             mCurrentUser = null;
         }
 
+        IntentUtil iUtil = new IntentUtil(this);
+
         Intent i = new Intent(this, DispatchActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK
                 | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i);
+        iUtil.goToActivity(i);
 
     }
 }

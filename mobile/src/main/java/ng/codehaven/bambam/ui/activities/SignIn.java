@@ -104,6 +104,8 @@ public class SignIn extends AppCompatActivity implements GraphRequest.OnProgress
                 pUser.put("name", user.optString("name"));
                 pUser.put("fb_id", user.optString("id"));
                 pUser.saveEventually();
+                Logger l = new Logger("Welcome, "+ user.optString("name"), SignIn.this, true);
+                l.toast();
                 finishActivity();
             }
         }).executeAsync();

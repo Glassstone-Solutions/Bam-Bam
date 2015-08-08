@@ -12,11 +12,13 @@ import ng.codehaven.bambam.utils.IntentUtil;
 
 public class DispatchActivity extends AppCompatActivity {
 
+    private IntentUtil iUtil = new IntentUtil(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Connectivity mConnect = new Connectivity(this);
-        IntentUtil iUtil = new IntentUtil(this);
+
         // Check if there is current user info
         if (ParseUser.getCurrentUser() != null) {
             iUtil.goToActivity(new Intent(this, Home.class));
@@ -41,7 +43,8 @@ public class DispatchActivity extends AppCompatActivity {
 
 
     private void doReleaseNoInternet() {
-
+        // Start and intent for the logged out activity
+        iUtil.goToActivity(new Intent(this, SignIn.class));
     }
 
     private void doDebug() {

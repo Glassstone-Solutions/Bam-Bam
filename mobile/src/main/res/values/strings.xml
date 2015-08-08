@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">BamBam</string>
     <string name="title_activity_home">BamBam</string>
 
     <string name="hello_world">Hello world!</string>

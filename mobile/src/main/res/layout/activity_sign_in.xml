@@ -9,14 +9,26 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <ImageView
-            android:layout_width="match_parent"
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:paddingBottom="60dp"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:src="@drawable/login_logo" />-->
+
+        <ng.codehaven.bambam.ui.views.CustomTextView
+            android:id="@+id/title"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingBottom="60dp"
+            android:layout_marginBottom="240dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:src="@drawable/login_logo" />
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"/>
 
         <Button
             android:id="@+id/loginButton"
@@ -34,7 +46,7 @@
             android:linksClickable="true"
             android:paddingTop="@dimen/title_bar_padding"
             android:text="@string/privacy_policy"
-            android:textColor="@android:color/white"
+            android:textColor="@color/abc_primary_text_material_dark"
             android:textSize="13sp" />
     </LinearLayout>
 

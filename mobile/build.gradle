@@ -13,7 +13,7 @@ android {
     }
     signingConfigs{
         releaseConfig{
-            storeFile file('bambam_key.jks');
+            storeFile file('../bambam_key.jks');
             storePassword("P@bopov!b234...");
             keyAlias("Bam Bam");
             keyPassword("Pabopovib234.");
@@ -22,7 +22,7 @@ android {
     buildTypes {
         release {
             debuggable false
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.releaseConfig
             setApplicationIdSuffix(".release")

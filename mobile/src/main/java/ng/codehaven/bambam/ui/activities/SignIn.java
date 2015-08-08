@@ -31,6 +31,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 
+import ng.codehaven.bambam.BuildConstants;
 import ng.codehaven.bambam.R;
 import ng.codehaven.bambam.utils.Logger;
 
@@ -45,7 +46,7 @@ public class SignIn extends AppCompatActivity implements GraphRequest.OnProgress
 
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
-                    "ng.codehaven.bambam",
+                    BuildConstants.BUILD_PACKAGE,
                     PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
                 MessageDigest md = MessageDigest.getInstance("SHA");

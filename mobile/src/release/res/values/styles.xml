@@ -1,0 +1,7 @@
+<resources>
+    <style name="TitleText" parent="@android:style/Widget.TextView">
+        <item name="ng.codehaven.bambam.release:font">fonts/Bariol_Regular_Italic.otf</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+    </style>
+
+</resources>

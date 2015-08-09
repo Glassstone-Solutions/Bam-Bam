@@ -8,6 +8,8 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.support.v7.widget.RecyclerView;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +24,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ng.codehaven.bambam.R;
 import ng.codehaven.bambam.ui.views.CustomTextView;
+import ng.codehaven.bambam.utils.CalloutLink;
+import ng.codehaven.bambam.utils.Hashtag;
 import ng.codehaven.bambam.utils.UIUtils;
 
 /**
@@ -70,7 +76,30 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         CellFeedViewHolder holder = (CellFeedViewHolder) viewHolder;
         if (position % 2 == 0) {
             holder.ivFeedCenter.setImageResource(R.drawable.img_feed_center_1);
-            holder.mDesc.setText(R.string.desc);
+//            holder.mDesc.setText(R.string.desc);
+
+            ArrayList<int[]> hashtagSpans = getSpans(context.getString(R.string.desc), '#');
+            ArrayList<int[]> calloutSpans = getSpans(context.getString(R.string.desc), '@');
+
+            SpannableString commentsContent = new SpannableString(context.getString(R.string.desc));
+
+            for (int i = 0; i < hashtagSpans.size(); i++) {
+                int[] span = hashtagSpans.get(i);
+                int hastagStart = span[0];
+                int hastagEnd = span[1];
+                commentsContent.setSpan(new Hashtag(context), hastagStart, hastagEnd, 0);
+            }
+
+            for (int i = 0; i < calloutSpans.size(); i++) {
+                int[] span = calloutSpans.get(i);
+                int calloutStart = span[0];
+                int calloutEnd = span[1];
+                commentsContent.setSpan(new CalloutLink(context), calloutStart, calloutEnd, 0);
+            }
+
+            holder.mDesc.setMovementMethod(LinkMovementMethod.getInstance());
+            holder.mDesc.setText(commentsContent);
+
         } else {
             holder.ivFeedCenter.setImageResource(R.drawable.img_feed_center_2);
             holder.mDesc.setText(R.string.desc2);
@@ -284,6 +313,23 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
 
     public void setOnFeedItemClickListener(OnFeedItemClickListener onFeedItemClickListener) {
         this.onFeedItemClickListener = onFeedItemClickListener;
+    }
+
+    public ArrayList<int[]> getSpans(String body, char prefix) {
+        ArrayList<int[]> spans = new ArrayList<>();
+        Pattern pattern = Pattern.compile(prefix + "\\w+");
+        Matcher matcher = pattern.matcher(body);
+
+        //Check all occurrences
+        while (matcher.find()) {
+            int[] currentSpan = new int[2];
+            currentSpan[0] = matcher.start();
+            currentSpan[1] = matcher.end();
+
+            spans.add(currentSpan);
+        }
+
+        return spans;
     }
 
     public interface OnFeedItemClickListener {

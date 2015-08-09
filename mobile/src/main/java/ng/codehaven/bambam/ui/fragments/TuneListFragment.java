@@ -3,36 +3,63 @@ package ng.codehaven.bambam.ui.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import ng.codehaven.bambam.R;
+import ng.codehaven.bambam.adapters.FeedAdapter;
 
 
-public class TuneListFragment extends Fragment {
+public class TuneListFragment extends Fragment implements FeedAdapter.OnFeedItemClickListener {
 
-    /**
-     * Called to have the fragment instantiate its user interface view.
-     * This is optional, and non-graphical fragments can return null (which
-     * is the default implementation).  This will be called between
-     * {@link #onCreate(Bundle)} and {@link #onActivityCreated(Bundle)}.
-     * <p/>
-     * <p>If you return a View from here, you will later be called in
-     * {@link #onDestroyView} when the view is being released.
-     *
-     * @param inflater           The LayoutInflater object that can be used to inflate
-     *                           any views in the fragment,
-     * @param container          If non-null, this is the parent view that the fragment's
-     *                           UI should be attached to.  The fragment should not add the view itself,
-     *                           but this can be used to generate the LayoutParams of the view.
-     * @param savedInstanceState If non-null, this fragment is being re-constructed
-     *                           from a previous saved state as given here.
-     * @return Return the View for the fragment's UI, or null.
-     */
+    protected RecyclerView mRecyclerView;
+    private FeedAdapter feedAdapter;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tune_list, container,false);
+        View v = inflater.inflate(R.layout.fragment_tune_list, container, false);
+
+        mRecyclerView = (RecyclerView) v.findViewById(R.id.rvFeed);
+
+        setupFeed(mRecyclerView);
+
+        if (savedInstanceState != null)
+            feedAdapter.updateItems(false);
+
+        feedAdapter.updateItems(true);
+
+        return v;
+    }
+
+    private void setupFeed(RecyclerView mRecyclerView) {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity()) {
+            @Override
+            protected int getExtraLayoutSpace(RecyclerView.State state) {
+                return 300;
+            }
+        };
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        feedAdapter = new FeedAdapter(getActivity());
+        feedAdapter.setOnFeedItemClickListener(this);
+        mRecyclerView.setAdapter(feedAdapter);
+    }
+
+    @Override
+    public void onCommentsClick(View v, int position) {
+
+    }
+
+    @Override
+    public void onMoreClick(View v, int position) {
+
+    }
+
+    @Override
+    public void onProfileClick(View v) {
+
     }
 }

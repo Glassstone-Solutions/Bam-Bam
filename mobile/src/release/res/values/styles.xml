@@ -1,7 +1,15 @@
 <resources>
-    <style name="TitleText" parent="@android:style/Widget.TextView">
+
+    <style name="baseText" parent="@android:style/Widget.TextView" />
+
+    <style name="TitleText" parent="baseText">
         <item name="ng.codehaven.bambam.release:font">fonts/Bariol_Regular_Italic.otf</item>
         <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+    </style>
+
+    <style name="BodyText" parent="baseText">
+        <item name="ng.codehaven.bambam.release:font">fonts/Bellota-light.otf</item>
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
     </style>
 
 </resources>

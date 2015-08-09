@@ -10,6 +10,17 @@
 
     <string name="privacy_policy">By logging in, you agree to our \n <a href="https://m.facebook.com/terms">Terms</a> and <a href="https://m.facebook.com/policy">Privacy Policy</a> \n \n <a href="https://gist.github.com/beardouglas/11349951">About</a></string>
     <string name="action_signout">Logout</string>
+
+    <string name="desc">
+        <![CDATA[ A little freestyle me and @jimmy2shoes made. I was mainly on the samples while he played the hell out of the guitar. #FunTimes]]>
+    </string>
+    <string name="desc2">This is my second post.</string>
+
     <string name="default_followers_count_text">230 followers</string>
     <string name="default_followed_count_text">230 followed</string>
+
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
 </resources>

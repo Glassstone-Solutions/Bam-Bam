@@ -6,12 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.parse.ParseUser;
 
 import butterknife.ButterKnife;
 import ng.codehaven.bambam.R;
 import ng.codehaven.bambam.ui.activities.DispatchActivity;
+import ng.codehaven.bambam.utils.FontCache;
 import ng.codehaven.bambam.utils.IntentUtil;
 import ng.codehaven.bambam.utils.Logger;
 
@@ -34,6 +36,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         if (hasToolBar()){
             setupToolBar(getToolBar());
+            TextView mToolBarTitle = (TextView) getToolBar().findViewById(R.id.toolbar_title);
+            mToolBarTitle.setTypeface(FontCache.get("fonts/GrandHotel-Regular.otf", this));
+            mToolBarTitle.setText(getString(R.string.app_name));
+            mToolBarTitle.setTextColor(getResources().getColor(R.color.ColorPrimary));
         }
 
         // Set current user
@@ -45,6 +51,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private void setupToolBar(Toolbar toolBar) {
         setSupportActionBar(toolBar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override

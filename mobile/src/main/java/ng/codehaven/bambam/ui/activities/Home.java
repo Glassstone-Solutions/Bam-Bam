@@ -16,6 +16,13 @@ public class Home extends BaseActivity {
     CharSequence Titles[]={"Home","Popular", "Search", "Profile"};
     int Numboftabs =4;
 
+    int tabIndicatorColors[] = {
+            R.color.ColorPrimary,
+            R.color.md_yellow_600,
+            R.color.md_purple_600,
+            R.color.md_light_green_600
+    };
+
     @InjectView(R.id.toolbar) protected Toolbar mToolBar;
     @InjectView(R.id.pager) protected ViewPager pager;
     @InjectView(R.id.tabs) protected SlidingTabLayout tabs;
@@ -49,11 +56,12 @@ public class Home extends BaseActivity {
 
         pager.setAdapter(adapter);
         tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
-
         // Setting Custom Color for the Scroll bar indicator of the Tab View
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
             public int getIndicatorColor(int position) {
+                if (position <= tabIndicatorColors.length)
+                    return getResources().getColor(tabIndicatorColors[position]);
                 return getResources().getColor(R.color.tabsScrollColor);
             }
         });

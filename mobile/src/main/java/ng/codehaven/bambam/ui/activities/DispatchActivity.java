@@ -48,6 +48,7 @@ public class DispatchActivity extends AppCompatActivity {
     }
 
     private void doDebug() {
-
+        // Start and intent for the logged out activity
+        iUtil.goToActivity(new Intent(this, SignIn.class));
     }
 }

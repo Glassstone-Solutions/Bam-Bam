@@ -3,6 +3,7 @@ package ng.codehaven.bambam.ui.views;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 
 import com.squareup.picasso.Transformation;
@@ -11,6 +12,8 @@ import com.squareup.picasso.Transformation;
  * https://gist.github.com/julianshen/5829333
  */
 public class CircleTransform implements Transformation {
+    private final int BORDER_COLOR = Color.WHITE;
+    private final int BORDER_RADIUS = 5;
     /**
      * Transform the source bitmap into a new bitmap. If you create a new bitmap instance, you must
      * call {@link Bitmap#recycle()} on {@code source}. You may return the original
@@ -39,7 +42,18 @@ public class CircleTransform implements Transformation {
         paint.setAntiAlias(true);
 
         float r = size / 2f;
-        canvas.drawCircle(r, r, r, paint);
+
+        // Prepare the background
+        Paint paintBg = new Paint();
+        paintBg.setColor(BORDER_COLOR);
+        paintBg.setAntiAlias(true);
+        paintBg.setStyle(Paint.Style.STROKE);
+
+        // Draw the background
+        canvas.drawCircle(r, r, r, paintBg);
+
+        // Draw the image smaller than the background
+        canvas.drawCircle(r, r, r - BORDER_RADIUS, paint);
 
         squaredBitmap.recycle();
         return bitmap;

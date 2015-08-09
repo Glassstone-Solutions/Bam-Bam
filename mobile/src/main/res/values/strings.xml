@@ -24,6 +24,11 @@
         <item quantity="other">%d likes</item>
     </plurals>
 
+    <plurals name="followers_count">
+        <item quantity="one">%d follower</item>
+        <item quantity="other">%d followers</item>
+    </plurals>
+
     <string name="callout_toast_message">Hey! %s</string>
     <string name="hashtag_toast_message">Tags for tags: %s</string>
 </resources>

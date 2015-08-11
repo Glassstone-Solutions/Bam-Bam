@@ -75,7 +75,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         runEnterAnimation(viewHolder.itemView, position);
         CellFeedViewHolder holder = (CellFeedViewHolder) viewHolder;
         if (position % 2 == 0) {
-            holder.ivFeedCenter.setImageResource(R.drawable.img_feed_center_1);
+            holder.ivFeedCenter.setImageResource(R.drawable.ic_art1);
 //            holder.mDesc.setText(R.string.desc);
 
             ArrayList<int[]> hashtagSpans = getSpans(context.getString(R.string.desc), '#');

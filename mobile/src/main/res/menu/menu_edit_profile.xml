@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ng.codehaven.bambam.ui.activities.EditProfile">
+    <item
+        android:id="@+id/action_send"
+        android:icon="@drawable/ic_send_black"
+        android:orderInCategory="100"
+        android:title="@string/action_send"
+        app:showAsAction="ifRoom" />
+
+</menu>

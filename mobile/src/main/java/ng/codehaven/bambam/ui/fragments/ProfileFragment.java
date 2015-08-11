@@ -1,6 +1,8 @@
 package ng.codehaven.bambam.ui.fragments;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,6 +17,7 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphRequestAsyncTask;
 import com.facebook.GraphResponse;
 import com.facebook.login.widget.ProfilePictureView;
+import com.parse.ParseUser;
 
 import org.json.JSONObject;
 
@@ -25,6 +28,12 @@ public class ProfileFragment extends Fragment {
 
     private ProfilePictureView p;
     private TextView t;
+    private TextView a;
+    private SharedPreferences sharedPref;
+    private String defaultName;
+    private String username;
+    private String aboutMe;
+    private boolean hasUsername;
 
     /**
      * Called to do initial creation of a fragment.  This is called after
@@ -44,6 +53,20 @@ public class ProfileFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
+        sharedPref = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+
+        defaultName = "defaultName";
+        aboutMe = " ";
+
+        username = sharedPref.getString("username", defaultName);
+        aboutMe = sharedPref.getString("about", aboutMe);
+        hasUsername = sharedPref.getBoolean("hasUsername", false);
+
+        Log.d("USER", username);
+
+
+
     }
 
     @Nullable
@@ -54,6 +77,7 @@ public class ProfileFragment extends Fragment {
 
         p = (ProfilePictureView) v.findViewById(R.id.myProfilePic);
         t = (TextView) v.findViewById(R.id.username);
+        a = (TextView) v.findViewById(R.id.about_me);
         return v;
     }
 
@@ -67,9 +91,8 @@ public class ProfileFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        String url = "http://graph.facebook.com/" + AccessToken.getCurrentAccessToken().getUserId() + "/picture?type=large";
-
-        Log.d("TAG", url);
+        t.setText(username);
+        a.setText(aboutMe);
 
         GraphRequestAsyncTask request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
             @Override
@@ -77,7 +100,19 @@ public class ProfileFragment extends Fragment {
                 if (user != null) {
                     // set the profile picture using their Facebook ID
                     p.setProfileId(user.optString("id"));
-                    t.setText(user.optString("name"));
+                    if (username.equals(defaultName) || !user.optString("name").equals(username) && !hasUsername) {
+                        String un;
+                        if (!hasUsername) {
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("username", user.optString("name"));
+                            editor.putBoolean("hasUsername", true);
+                            editor.apply();
+                            un = user.optString("name");
+                        } else {
+                            un = ParseUser.getCurrentUser().getString("f_username");
+                        }
+                        t.setText(un);
+                    }
                 }
             }
         }).executeAsync();

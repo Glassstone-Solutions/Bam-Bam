@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "ng.codehaven.bambam"
-        minSdkVersion 13
+        minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -22,7 +22,7 @@ android {
     buildTypes {
         release {
             debuggable false
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.releaseConfig
             setApplicationIdSuffix(".release")

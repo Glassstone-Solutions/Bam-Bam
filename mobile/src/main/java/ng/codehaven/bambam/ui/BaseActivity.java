@@ -1,14 +1,22 @@
 package ng.codehaven.bambam.ui;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.parse.ParseException;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
+
+import java.util.List;
 
 import butterknife.ButterKnife;
 import ng.codehaven.bambam.R;
@@ -19,13 +27,23 @@ import ng.codehaven.bambam.utils.Logger;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
+    protected ParseUser mCurrentUser;
+    protected List<ParseUser> pUsers;
+    protected Logger mLogger;
+    protected SharedPreferences sharedPref;
+    protected SharedPreferences.Editor editor;
+    protected TextView mToolBarTitle;
+    protected ProgressBar mProgressBar;
+
     public abstract int getActivityResourceId();
+
     public abstract boolean hasToolBar();
+
     public abstract Toolbar getToolBar();
+
     public abstract int getMenuResourceId();
 
-    protected ParseUser mCurrentUser;
-    protected Logger mLogger;
+    public abstract boolean enableBack();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +52,14 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         ButterKnife.inject(this);
 
-        if (hasToolBar()){
+        if (hasToolBar()) {
             setupToolBar(getToolBar());
-            TextView mToolBarTitle = (TextView) getToolBar().findViewById(R.id.toolbar_title);
+            mToolBarTitle = (TextView) getToolBar().findViewById(R.id.toolbar_title);
             mToolBarTitle.setTypeface(FontCache.get("fonts/GrandHotel-Regular.otf", this));
             mToolBarTitle.setText(getString(R.string.app_name));
             mToolBarTitle.setTextColor(getResources().getColor(R.color.ColorPrimary));
+
+            mProgressBar = (ProgressBar) getToolBar().findViewById(R.id.progress_spinner);
         }
 
         // Set current user
@@ -47,11 +67,21 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         // Setup Logger
 
+        // Setup Shared Pref
+
+        sharedPref = getPreferences(Context.MODE_PRIVATE);
     }
 
     private void setupToolBar(Toolbar toolBar) {
         setSupportActionBar(toolBar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(enableBack());
+    }
+
+    public List<ParseUser> checkUserName(String username) throws ParseException {
+        ParseQuery<ParseUser> u = ParseUser.getQuery();
+        u.whereEqualTo("username", username);
+        return u.find();
     }
 
     @Override
@@ -69,9 +99,13 @@ public abstract class BaseActivity extends AppCompatActivity {
 //        if (id == R.id.action_settings) {
 //            return true;
 //        }
-        switch (id){
+        switch (id) {
             case R.id.action_signout:
                 signout();
+                finish();
+                break;
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
                 break;
         }
 
@@ -79,10 +113,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     private void signout() {
-        if (mCurrentUser.isAuthenticated()) {
-            ParseUser.logOut();
-            mCurrentUser = null;
-        }
+        ParseUser.logOut();
+        mCurrentUser = null;
 
         IntentUtil iUtil = new IntentUtil(this);
 

@@ -2,19 +2,27 @@
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
-    android:minHeight="?attr/actionBarSize"
-    android:background="@color/background_material_light"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:theme="@style/homeToolbarStyle"
-    app:popupTheme="@style/contentMaterialLightBackground">
+    android:background="@color/background_material_light"
+    android:minHeight="?attr/actionBarSize"
+    app:popupTheme="@style/contentMaterialLightBackground"
+    app:theme="@style/homeToolbarStyle">
 
 
     <TextView
+        android:id="@+id/toolbar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start|center"
-        android:textSize="@dimen/abc_text_size_large_material"
-        android:id="@+id/toolbar_title" />
+        android:textSize="@dimen/abc_text_size_large_material" />
+
+    <ProgressBar
+        android:id="@+id/progress_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:indeterminate="true"
+        android:visibility="gone" />
 
 </android.support.v7.widget.Toolbar>

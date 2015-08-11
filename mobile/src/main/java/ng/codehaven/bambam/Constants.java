@@ -25,4 +25,13 @@ public class Constants {
     public static final String TYPE_VIDEO = "video";
     public static final String TYPE_VOICE_NOTE = "voiceNote";
     public static final String TYPE_MP3 = "mp3";
+
+
+    public static final String COGNITO_POOL_ID = "us-east-1:5b416ebc-4062-4a17-acad-fd1c30815802";
+    /*
+     * Note, you must first create a bucket using the S3 console before running
+     * the sample (https://console.aws.amazon.com/s3/). After creating a bucket,
+     * put it's name in the field below.
+     */
+    public static final String BUCKET_NAME = "bambam";
 }

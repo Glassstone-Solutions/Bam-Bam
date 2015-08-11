@@ -16,8 +16,8 @@
     </string>
     <string name="desc2">This is my second post.</string>
 
-    <string name="default_followers_count_text">230 followers</string>
-    <string name="default_followed_count_text">230 followed</string>
+    <string name="default_followers_count_text">Followers</string>
+    <string name="default_followed_count_text">Following</string>
 
     <plurals name="likes_count">
         <item quantity="one">%d like</item>
@@ -31,4 +31,13 @@
 
     <string name="callout_toast_message">Hey! %s</string>
     <string name="hashtag_toast_message">Tags for tags: %s</string>
+    <string name="title_activity_edit_profile">Edit Profile</string>
+    <string name="username_hint_txt">Username</string>
+    <string name="about_me_hint_txt">About me</string>
+    <string name="action_send">Upload</string>
+    <string name="empty_username_text">Username can\'t be empty</string>
+    <string name="taken_username_text">This username is taken</string>
+    <string name="general_error_text">Something went wrong!</string>
+    <string name="retry">Retry</string>
+    <string name="default_tunes_count_text">Tunes</string>
 </resources>

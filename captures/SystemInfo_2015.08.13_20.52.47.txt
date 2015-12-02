@@ -1,0 +1,92 @@
+TASK ng.codehaven.bambam.release id=317
+  ACTIVITY ng.codehaven.bambam.release/ng.codehaven.bambam.ui.activities.Home 429812a0 pid=12475
+    Local FragmentActivity 42217cc0 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    Active Fragments in 42217f30:
+      #0: czd{4274f610 #0 id=0x7f0e008f}
+        mFragmentId=#7f0e008f mContainerId=#7f0e008f mTag=null
+        mState=5 mIndex=0 mWho=android:fragment:0 mBackStackNesting=0
+        mAdded=true mRemoving=false mResumed=true mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{42217f30 in Home{42217cc0}}
+        mActivity=ng.codehaven.bambam.ui.activities.Home@42217cc0
+        mContainer=android.support.v4.view.ViewPager{4225ac08 VFED.... ........ 0,209-720,1230 #7f0e008f app:id/pager}
+        mView=android.support.v7.widget.RecyclerView{4274fe28 VFED.... .F...... 0,0-720,1021 #7f0e00a5 app:id/rvFeed}
+        mInnerView=android.support.v7.widget.RecyclerView{4274fe28 VFED.... .F...... 0,0-720,1021 #7f0e00a5 app:id/rvFeed}
+        Child FragmentManager{4274fbd0 in czd{4274f610}}:
+          FragmentManager misc state:
+            mActivity=ng.codehaven.bambam.ui.activities.Home@42217cc0
+            mContainer=android.support.v4.app.Fragment$1@4274fc48
+            mParent=czd{4274f610 #0 id=0x7f0e008f}
+            mCurState=5 mStateSaved=false mDestroyed=false
+      #1: czb{4274f7d0 #1 id=0x7f0e008f}
+        mFragmentId=#7f0e008f mContainerId=#7f0e008f mTag=null
+        mState=5 mIndex=1 mWho=android:fragment:1 mBackStackNesting=0
+        mAdded=true mRemoving=false mResumed=true mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=false mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=false
+        mFragmentManager=FragmentManager{42217f30 in Home{42217cc0}}
+        mActivity=ng.codehaven.bambam.ui.activities.Home@42217cc0
+        mContainer=android.support.v4.view.ViewPager{4225ac08 VFED.... ........ 0,209-720,1230 #7f0e008f app:id/pager}
+        mView=android.widget.FrameLayout{42751158 V.E..... ........ 720,0-1440,1021}
+        mInnerView=android.widget.FrameLayout{42751158 V.E..... ........ 720,0-1440,1021}
+        Child FragmentManager{42750f38 in czb{4274f7d0}}:
+          FragmentManager misc state:
+            mActivity=ng.codehaven.bambam.ui.activities.Home@42217cc0
+            mContainer=android.support.v4.app.Fragment$1@42750fb0
+            mParent=czb{4274f7d0 #1 id=0x7f0e008f}
+            mCurState=5 mStateSaved=false mDestroyed=false
+    Added Fragments:
+      #0: czd{4274f610 #0 id=0x7f0e008f}
+      #1: czb{4274f7d0 #1 id=0x7f0e008f}
+    FragmentManager misc state:
+      mActivity=ng.codehaven.bambam.ui.activities.Home@42217cc0
+      mContainer=android.support.v4.app.FragmentActivity$2@422dd990
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{42219958 V.E..... ... 0,0-720,1280}
+        android.widget.LinearLayout{4221a0c8 V.E..... ... 0,0-720,1280}
+          android.view.ViewStub{4221ab70 G.E..... ... 0,0-0,0 #1020312}
+          android.widget.FrameLayout{4221add0 V.E..... ... 0,50-720,1280}
+            android.support.v7.internal.widget.FitWindowsLinearLayout{4221bc68 V.E..... ... 0,0-720,1230 #7f0e0076 app:id/action_bar_root}
+              android.support.v7.internal.widget.ViewStubCompat{4221bfa0 G.E..... ... 0,0-0,0 #7f0e0077 app:id/action_mode_bar_stub}
+              android.support.v7.internal.widget.ContentFrameLayout{4221c400 V.ED.... ... 0,0-720,1230 #1020002 android:id/content}
+                android.widget.RelativeLayout{4221d910 V.E..... ... 0,0-720,1230}
+                  android.support.v7.widget.Toolbar{4221df98 V.E..... ... 0,0-720,112 #7f0e008b app:id/toolbar}
+                    android.support.v7.widget.AppCompatTextView{4221f4a0 V.ED.... ... 32,25-164,86 #7f0e00cd app:id/toolbar_title}
+                    android.widget.ProgressBar{42259418 G.ED.... ... 0,0-0,0 #7f0e00ce app:id/progress_spinner}
+                    android.support.v7.widget.ActionMenuView{42761eb0 V.E..... ... 624,0-720,112}
+                      aaj{42762548 VFED..C. ... 0,8-96,104}
+                  ng.codehaven.bambam.ui.views.SlidingTabLayout{42259ca8 VFED.... ... 0,112-720,209 #7f0e008e app:id/tabs}
+                    czh{4225a5c8 V.ED.... ... 0,0-720,97}
+                      android.widget.TextView{42260280 V.ED..C. .S. 0,0-180,97}
+                      android.widget.TextView{42748278 V.ED..C. ... 180,0-360,97}
+                      android.widget.TextView{42748c88 V.ED..C. ... 360,0-540,97}
+                      android.widget.TextView{42749690 V.ED..C. ... 540,0-720,97}
+                  android.support.v4.view.ViewPager{4225ac08 VFED.... ... 0,209-720,1230 #7f0e008f app:id/pager}
+                    android.support.v7.widget.RecyclerView{4274fe28 VFED.... F.. 0,0-720,1021 #7f0e00a5 app:id/rvFeed}
+                      android.support.v7.widget.CardView{42752b80 V.E..... ... 16,16-704,1072 #7f0e00a6 app:id/card_view}
+                        android.widget.LinearLayout{427531d0 V.E..... ... 7,9-681,1047}
+                          android.widget.ImageView{427534f0 V.ED..C. ... 0,0-195,100 #7f0e00a7 app:id/ivUserProfile}
+                          ng.codehaven.bambam.ui.views.SquaredFrameLayout{427538f8 V.E..... ... 0,100-674,774}
+                            android.widget.ImageView{42753c38 V.ED..C. ... 0,0-674,674 #7f0e00a8 app:id/ivFeedCenter}
+                            android.view.View{42753f50 G.ED.... ... 0,0-674,674 #7f0e00a9 app:id/vBgLike}
+                            android.widget.ImageView{427542b0 G.ED.... ... 0,0-674,674 #7f0e00aa app:id/ivLike}
+                          ng.codehaven.bambam.ui.views.CustomTextView{427546e8 VFED..CL ... 32,806-642,910 #7f0e0099 app:id/desc}
+                          android.widget.LinearLayout{42754de0 V.E..... ... 0,942-674,1038}
+                            android.widget.ImageButton{42755110 VFED..C. ... 16,0-112,96 #7f0e00ab app:id/btnLike}
+                            android.widget.ImageButton{42755530 VFED..C. ... 112,0-208,96 #7f0e00ac app:id/btnComments}
+                            android.widget.ImageButton{42755cb0 VFED..C. ... 208,0-304,96 #7f0e00ad app:id/btnMore}
+                            android.widget.LinearLayout{42756430 V.E..... ... 304,0-658,96}
+                              android.widget.ImageView{42756710 V.ED.... ... 201,37-225,58}
+                              android.widget.TextSwitcher{42756ad0 V.E..... ... 241,29-338,67 #7f0e00ae app:id/tsLikesCounter}
+                                android.support.v7.widget.AppCompatTextView{42758280 G.ED.... ... 0,0-97,38}
+                                android.support.v7.widget.AppCompatTextView{42758708 V.ED.... ... 0,0-97,38}
+                    android.widget.FrameLayout{42751158 V.E..... ... 720,0-1440,1021}
+                  android.support.design.widget.FloatingActionButton{4225b590 V.ED..C. ... 520,1002-688,1198 #7f0e0090 app:id/fab}
+                  android.support.design.widget.FloatingActionButton{4225c9a0 I.ED..C. ... 520,804-688,1000 #7f0e0091 app:id/addTuneFab}
+                  android.support.design.widget.FloatingActionButton{4225ddb0 I.ED..C. ... 520,606-688,802 #7f0e0092 app:id/editFab}
+
+  ACTIVITY ng.codehaven.bambam.release/ng.codehaven.bambam.ui.activities.Home 4225dfe8 pid=(not running)

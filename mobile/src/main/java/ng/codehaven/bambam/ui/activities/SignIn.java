@@ -23,6 +23,7 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import org.json.JSONObject;
 
@@ -101,13 +102,20 @@ public class SignIn extends AppCompatActivity implements GraphRequest.OnProgress
         // TODO: Change UI to indicate login process
         GraphRequestAsyncTask request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
             @Override
-            public void onCompleted(JSONObject user, GraphResponse response) {
+            public void onCompleted(final JSONObject user, GraphResponse response) {
                 pUser.put("name", user.optString("name"));
                 pUser.put("fb_id", user.optString("id"));
-                pUser.saveEventually();
-                Logger l = new Logger("Welcome, "+ user.optString("name"), SignIn.this, true);
-                l.toast();
-                finishActivity();
+                pUser.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                            Logger l = new Logger("Welcome, " + user.optString("name"), SignIn.this, true);
+                            l.toast();
+                            finishActivity();
+                        }
+                    }
+                });
+
             }
         }).executeAsync();
 //        GraphRequestAsyncTask request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), null).executeAsync();

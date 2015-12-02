@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ng.codehaven.bambam.ui.fragments.ChooseArtworkFragment">
+
+    <ng.codehaven.bambam.ui.views.SquaredFrameLayout
+        android:id="@+id/artLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin">
+        <ImageView
+            android:id="@+id/art"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/com_facebook_profile_picture_blank_square"/>
+    </ng.codehaven.bambam.ui.views.SquaredFrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/userMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+
+            <ng.codehaven.bambam.ui.views.BezelImageView
+                android:id="@+id/ivUserProfile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:maskDrawable="@drawable/circle_mask" />
+
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivUserProfile"
+                android:layout_marginLeft="8dp"
+                android:text="Username"
+                android:textColor="@color/text_like_counter" />
+
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/tvTimeStamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:text="Time ago" />
+
+        </RelativeLayout>
+
+        <ng.codehaven.bambam.ui.views.SquaredFrameLayout
+            android:id="@+id/ivFeedCenterView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userMeta">
+
+            <ImageView
+                android:id="@+id/ivFeedCenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:id="@+id/vBgLike"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_like_circle_background" />
+
+            <ImageView
+                android:id="@+id/ivLike"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/ic_heart_outline_white" />
+
+        </ng.codehaven.bambam.ui.views.SquaredFrameLayout>
+
+        <ImageButton
+            android:id="@+id/btnLike"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:layout_alignTop="@+id/ivFeedCenterView"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_heart_outline_grey" />
+
+        <ImageButton
+            android:id="@+id/btnComments"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_feed_action"
+            android:layout_below="@id/btnLike"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_comment_outline_grey" />
+
+        <ImageButton
+            android:id="@+id/btnMore"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_feed_action"
+            android:layout_below="@id/btnComments"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_more_grey" />
+
+        <ng.codehaven.bambam.ui.views.CustomTextView
+            android:id="@+id/likeCount"
+            android:text="23"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/abc_secondary_text_material_light"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivFeedCenterView"
+            android:layout_marginTop="46dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_toLeftOf="@id/btnLike"/>
+
+        <ng.codehaven.bambam.ui.views.CustomTextView
+            android:id="@+id/commentsCount"
+            android:text="23"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/abc_secondary_text_material_light"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/likeCount"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_toLeftOf="@id/btnLike"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/ivFeedCenterView"
+            android:padding="@dimen/activity_vertical_margin"
+            android:background="@color/ColorPrimary">
+
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/titleTV"
+                android:text="Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/abc_primary_text_material_dark"
+                android:textSize="24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/desc"
+                style="@style/BodyText"
+                android:text="Music by Bad man Floss."
+                android:textSize="14sp"
+                android:textColor="@color/abc_secondary_text_material_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:id="@+id/likeButton"-->
+        <!--android:clickable="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignRight="@+id/valueLabel" />-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:id="@+id/commentButton"-->
+        <!--android:clickable="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignRight="@+id/valueLabel" />-->
+</merge>

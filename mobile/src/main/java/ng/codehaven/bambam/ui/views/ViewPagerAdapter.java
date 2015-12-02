@@ -1,8 +1,11 @@
 package ng.codehaven.bambam.ui.views;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.parse.ParseUser;
 
 import ng.codehaven.bambam.ui.fragments.PopularFragment;
 import ng.codehaven.bambam.ui.fragments.ProfileFragment;
@@ -45,7 +48,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
                 f = new SearchFragment();
                 break;
             case 3:
-                f = new ProfileFragment();
+                Bundle b = new Bundle();
+                b.putString("userId", ParseUser.getCurrentUser().getObjectId());
+                b.putBoolean("isLocal", true);
+                f = ProfileFragment.newInstance(b);
                 break;
         }
 

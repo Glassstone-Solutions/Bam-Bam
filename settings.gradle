@@ -1,1 +1,2 @@
-include ':mobile', ':wear', ':libraries:facebook'
+include ':mobile', ':wear', ':libraries:facebook', ':libraries:cloudconvert'
+//include ':libraries:SuperRecyclerView'

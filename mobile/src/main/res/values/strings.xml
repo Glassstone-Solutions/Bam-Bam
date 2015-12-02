@@ -8,6 +8,8 @@
 
     <string name="facebook_app_id">398377430368327</string>
 
+    <string name="comments_text">%1$s %2$s</string>
+
     <string name="privacy_policy">By logging in, you agree to our \n <a href="https://m.facebook.com/terms">Terms</a> and <a href="https://m.facebook.com/policy">Privacy Policy</a> \n \n <a href="https://gist.github.com/beardouglas/11349951">About</a></string>
     <string name="action_signout">Logout</string>
 
@@ -40,4 +42,21 @@
     <string name="general_error_text">Something went wrong!</string>
     <string name="retry">Retry</string>
     <string name="default_tunes_count_text">Tunes</string>
+    <string name="my_empty_tunes">You haven\'t uploaded any tune yet.</string>
+    <string name="empty_tunes">This user hasn\'t uploaded any tune yet.</string>
+    <string name="title_activity_send_tune">Upload</string>
+    <string name="title_activity_choose_mp3">Choose Mp3</string>
+    <string name="title_activity_choose_artwork">Choose Artwork</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_file_size_too_large">Track file is too large. It cannot exceed 10mb,</string>
+    <string name="upload_started">Uploading</string>
+    <string name="title_activity_check_for_tunes">CheckForTunesActivity</string>
+    <string name="title_activity_comments">Comments</string>
+    <string name="title_activity_now_playing">NowPlayingActivity</string>
+    <string name="currently_playing_song">Song currently playing</string>
+    <string name="currently_playing_artist">Artist of currently playing song</string>
+    <string name="currently_playing_extra_info">Extra info for currently playing song</string>
+    <string name="play_pause">Play or pause</string>
 </resources>

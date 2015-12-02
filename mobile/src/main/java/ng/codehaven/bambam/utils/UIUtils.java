@@ -9,6 +9,10 @@ import android.telephony.TelephonyManager;
 import android.view.Display;
 import android.view.WindowManager;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class UIUtils {
     private static int screenWidth = 0;
     private static int screenHeight = 0;
@@ -103,6 +107,13 @@ public class UIUtils {
         TelephonyManager manager = (TelephonyManager) c.getSystemService(Context.TELEPHONY_SERVICE);
         //getNetworkCountryIso
         return manager.getSimCountryIso().toUpperCase();
+    }
+
+    public static String getTime(String string) {
+        Date d = new Date(Integer.parseInt(string));
+        DateFormat format = new SimpleDateFormat("mm:ss");
+
+        return format.format(d);
     }
 
 

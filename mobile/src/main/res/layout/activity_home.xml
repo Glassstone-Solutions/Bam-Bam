@@ -1,41 +1,197 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="ng.codehaven.bambam.ui.activities.Home">
+    android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
-
-    <ng.codehaven.bambam.ui.views.SlidingTabLayout
-        android:id="@+id/tabs"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:background="@color/background_material_light"
-        android:elevation="2dp" />
+        android:layout_height="match_parent"
+        tools:context="ng.codehaven.bambam.ui.activities.Home">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tabs"/>
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:elevation="2dp"
-        android:src="@drawable/ic_add_white"
-        app:borderWidth="0dp"
-        app:rippleColor="@color/ColorPrimary"/>
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
 
-</RelativeLayout>
+            <ng.codehaven.bambam.ui.views.SlidingTabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:background="@color/background_material_light"
+                android:elevation="2dp" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appbar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/trackSeek"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:elevation="2dp"
+            android:src="@drawable/ic_add_white"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/ColorPrimary"
+            app:layout_behavior="ng.codehaven.bambam.ui.views.ScrollAwareFABBehavior"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addTuneFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fab"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_add_white"
+            android:visibility="invisible"
+            app:backgroundTint="@color/md_yellow_600"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/ColorPrimary" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/editFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/addTuneFab"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:elevation="2dp"
+            android:src="@drawable/ic_edit_white"
+            android:visibility="invisible"
+            app:backgroundTint="@color/md_light_green_600"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/ColorPrimary" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/controls_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:elevation="8dp">
+
+            <fragment android:name="ng.codehaven.bambam.ui.fragments.PlaybackControlsFragment"
+                android:id="@+id/fragment_playback_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+
+        </android.support.v7.widget.CardView>
+
+        <SeekBar
+            android:id="@+id/trackSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/trackControl"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:thumb="@null"
+            android:visibility="invisible"
+            />
+
+        <LinearLayout
+            android:id="@+id/trackControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ColorPrimary"
+            android:visibility="invisible">
+
+            <ng.codehaven.bambam.ui.views.SquaredFrameLayout
+                android:layout_width="72dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/artThumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_feed_center_1"/>
+            </ng.codehaven.bambam.ui.views.SquaredFrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:paddingTop="8dp">
+                <ng.codehaven.bambam.ui.views.CustomTextView
+                    android:id="@+id/trackTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="Title"
+                    android:textColor="@color/common_signin_btn_dark_text_default"/>
+                <ng.codehaven.bambam.ui.views.CustomTextView
+                    android:id="@+id/trackArtist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="Artist"
+                    android:textColor="@color/common_signin_btn_dark_text_default" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:padding="8dp">
+                <ImageButton
+                    android:id="@+id/skipBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_fast_rewind_white_36dp"
+                    android:background="@null"/>
+                <ImageButton
+                    android:id="@+id/play_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_media_play"
+                    android:background="@null"/>
+                <ImageButton
+                    android:id="@+id/skipForward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_fast_forward_white_36dp"
+                    android:background="@null"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

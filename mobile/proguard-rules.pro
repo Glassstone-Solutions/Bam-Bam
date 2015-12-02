@@ -62,6 +62,10 @@
    public void *(android.view.MenuItem);
 }
 
+#-libraryjars C:/Users/Thompson/AndroidStudioProjects/bambam/mobile/libs/aws-android-sdk-core-2.2.5
+#-libraryjars C:/Users/Thompson/AndroidStudioProjects/bambam/mobile/libs/aws-android-sdk-cognito-2.2.5
+#-libraryjars C:/Users/Thompson/AndroidStudioProjects/bambam/mobile/libs/aws-android-sdk-s3-2.2.5
+
 -keepclassmembers class * implements android.os.Parcelable {
     static ** CREATOR;
 }
@@ -113,16 +117,47 @@
 -dontwarn javax.**
 -dontwarn io.realm.**
 
--keep class ng.codehaven.bambam.models.**{*;}
+-keep class ng.codehaven.bambam.**{*;}
 
 -keep class com.parse.*{ *; }
 -dontwarn com.parse.**
 
+-keep class android.net.**{*;}
+
 
 -dontwarn com.squareup.okhttp.**
 
+
+#-keep class org.apache.commons.logging.**               { *; }
+##-keep class com.amazonaws.services.sqs.QueueUrlHandler  { *; }
+#-keep class com.amazonaws.javax.xml.transform.sax.*     { public *; }
+#-keep class com.amazonaws.javax.xml.stream.**           { *; }
+#-keep class com.amazonaws.services.**.model.*Exception* { *; }
+#-keep class com.amazonaws.internal.** 					{ *; }
+#-keep class org.codehaus.**                             { *; }
+#-keep class org.joda.convert.*							{ *; }
+#-keepattributes Signature,*Annotation*,EnclosingMethod
+#-keepnames class com.fasterxml.jackson.** { *; }
+#-keepnames class com.amazonaws.** { *; }
+#
+#-dontwarn com.amazonaws.auth.policy.conditions.S3ConditionFactory
+#-dontwarn org.joda.time.**
+#-dontwarn com.fasterxml.jackson.databind.**
+#-dontwarn javax.xml.stream.events.**
+#-dontwarn org.codehaus.jackson.**
+#-dontwarn org.apache.commons.logging.impl.**
+#-dontwarn org.apache.http.conn.scheme.**
+#-dontwarn org.apache.http.annotation.**
+#-dontwarn org.ietf.jgss.**
+#-dontwarn org.w3c.dom.bootstrap.**
+#
+#-dontwarn com.fasterxml.jackson.core.JsonFactory
+#-dontwarn com.fasterxml.jackson.core.JsomGenerator
+#-dontwarn com.fasterxml.jackson.core.JsonToken
+#-dontwarn com.fasterxml.jackson.core.JsonParser
+
 -keep class org.apache.commons.logging.**               { *; }
-#-keep class com.amazonaws.services.sqs.QueueUrlHandler  { *; }
+-keep class com.amazonaws.services.sqs.QueueUrlHandler  { *; }
 -keep class com.amazonaws.javax.xml.transform.sax.*     { public *; }
 -keep class com.amazonaws.javax.xml.stream.**           { *; }
 -keep class com.amazonaws.services.**.model.*Exception* { *; }
@@ -143,11 +178,6 @@
 -dontwarn org.apache.http.annotation.**
 -dontwarn org.ietf.jgss.**
 -dontwarn org.w3c.dom.bootstrap.**
-
--dontwarn com.fasterxml.jackson.core.JsonFactory
--dontwarn com.fasterxml.jackson.core.JsomGenerator
--dontwarn com.fasterxml.jackson.core.JsonToken
--dontwarn com.fasterxml.jackson.core.JsonParser
 
 -keep class com.facebook.** {*;}
 -keep class bolts.** {*;}

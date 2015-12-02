@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import ng.codehaven.bambam.R;
+import ng.codehaven.bambam.ui.views.CustomTextView;
 
 public class CalloutLink extends ClickableSpan {
     Context mContext;
@@ -27,7 +28,13 @@ public class CalloutLink extends ClickableSpan {
 
     @Override
     public void onClick(View widget) {
-        TextView textView = (TextView) widget;
+        TextView textView = null;
+        if (widget instanceof CustomTextView) {
+            textView = (CustomTextView) widget;
+        } else {
+            textView = (TextView) widget;
+        }
+        assert textView != null;
         Spanned spanned = (Spanned) textView.getText();
         int start = spanned.getSpanStart(this);
         int end = spanned.getSpanEnd(this);

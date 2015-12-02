@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -13,11 +14,40 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/ivUserProfile"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_feed_top" />
+            android:layout_margin="8dp">
+
+            <ng.codehaven.bambam.ui.views.BezelImageView
+                android:id="@+id/ivUserProfile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:maskDrawable="@drawable/circle_mask" />
+
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivUserProfile"
+                android:layout_marginLeft="8dp"
+                android:text="Username"
+                android:textColor="@color/text_like_counter"
+                />
+
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/tvTimeStamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:text="Time ago"/>
+        </RelativeLayout>
+
 
         <ng.codehaven.bambam.ui.views.SquaredFrameLayout
             android:layout_width="match_parent"
@@ -50,11 +80,62 @@
         <!--android:layout_height="wrap_content" />-->
 
         <ng.codehaven.bambam.ui.views.CustomTextView
+            android:id="@+id/title"
+            style="@style/card_title"
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ng.codehaven.bambam.ui.views.CustomTextView
             android:id="@+id/desc"
             style="@style/BodyText"
+            android:text="Music by Bad man Floss."
+            android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/activity_horizontal_margin" />
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/c1"
+                style="@style/BodyText"
+                android:text="Music by Bad man Floss."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="4dp" />
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/c2"
+                style="@style/BodyText"
+                android:text="Music by Bad man Floss."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="4dp" />
+            <ng.codehaven.bambam.ui.views.CustomTextView
+                android:id="@+id/c3"
+                style="@style/BodyText"
+                android:text="Music by Bad man Floss."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="4dp" />
+
+        </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"

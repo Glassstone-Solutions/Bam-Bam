@@ -5,37 +5,33 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class Logger {
-
-    private String mMessage;
     private String mTag;
     private Context mContext;
     private boolean mIsToast;
     public static final String TAG = "BAM-BAM";
 
-    public Logger(String message, String tag) {
-        mMessage = message;
+    public Logger(String tag) {
         mTag = tag;
         mIsToast = false;
     }
 
-    public Logger(String message, Context context, boolean isToast) {
-        mMessage = message;
+    public Logger(Context context, boolean isToast) {
         mContext = context;
         mIsToast = isToast;
     }
 
-    public void log(){
+    public void log(String message){
         if (mTag.isEmpty()){
             mTag = TAG;
         }
-        Log.d(mTag, mMessage);
+        Log.d(mTag, message);
     }
 
-    public void toast(){
+    public void toast(String message){
         if (!mIsToast){
-            log();
+            log(message);
         } else {
-            Toast.makeText(mContext, mMessage, Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show();
         }
     }
 }

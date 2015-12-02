@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="primary">#03A9F4</color>
+    <color name="primary_dark">#0288D1</color>
+    <color name="primary_light">#B3E5FC</color>
+    <color name="accent">#FF5722</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
     <color name="background_body">@color/ColorPrimary</color>
     <color name="yellow">#ffe63c</color>
     <color name="nav_selected">#21201f</color>
-    <color name="light_gray">#d5d5d5</color>
+    <color name="light_gray">#F5F5F5</color>
     <color name="white">#fff</color>
     <color name="navy">#2e4551</color>
     <color name="black">#2d2b2b</color>
@@ -16,13 +26,14 @@
     <color name="gameslounge">#d8532f</color>
     <color name="transparent">#00000000</color>
 
-    <color name="ColorPrimary">#2196F3</color>
-    <color name="ColorPrimaryDark">#c31c13</color>
-    <color name="tabsScrollColor">#8a140e</color>
+    <color name="ColorPrimary">@color/md_light_blue_500</color>
+    <color name="ColorPrimaryDark">@color/style_color_primary_dark</color>
+    <color name="ColorPrimaryAccent">@color/style_color_accent</color>
+    <color name="tabsScrollColor">@color/style_color_accent</color>
 
-    <color name="style_color_primary">#2d5d82</color>
-    <color name="style_color_primary_dark">#21425d</color>
-    <color name="style_color_accent">#01bcd5</color>
+    <color name="style_color_primary">#03A9F4</color>
+    <color name="style_color_primary_dark">#0288D1</color>
+    <color name="style_color_accent">#536DFE</color>
 
     <color name="fab_color_pressed">#007787</color>
     <color name="fab_color_shadow">#44000000</color>
@@ -333,4 +344,6 @@
     <color name="md_blue_grey_700">#455a64</color>
     <color name="md_blue_grey_800">#37474f</color>
     <color name="md_blue_grey_900">#263238</color>
+    <color name="rounded_container_bg">#222222</color>
+    <color name="rounded_container_border">#3b3f44</color>
 </resources>

@@ -1,4 +1,4 @@
-package ng.codehaven.bambam.adapters;
+package ng.codehaven.bambam.ui.adapters;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

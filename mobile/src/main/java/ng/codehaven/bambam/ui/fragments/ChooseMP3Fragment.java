@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ng.codehaven.bambam.R;
-import ng.codehaven.bambam.adapters.TrackChooserAdapter;
+import ng.codehaven.bambam.ui.adapters.TrackChooserAdapter;
 
 
 public class ChooseMP3Fragment extends Fragment implements TrackChooserAdapter.OnTrackItemClickListener {

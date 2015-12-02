@@ -24,7 +24,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ng.codehaven.bambam.R;
-import ng.codehaven.bambam.adapters.UserProfileAdapter;
+import ng.codehaven.bambam.ui.adapters.UserProfileAdapter;
 import ng.codehaven.bambam.models.Track;
 import ng.codehaven.bambam.utils.GetTunesHelper;
 

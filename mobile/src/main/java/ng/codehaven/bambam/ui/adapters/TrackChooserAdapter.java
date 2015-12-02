@@ -1,4 +1,4 @@
-package ng.codehaven.bambam.adapters;
+package ng.codehaven.bambam.ui.adapters;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import butterknife.ButterKnife;

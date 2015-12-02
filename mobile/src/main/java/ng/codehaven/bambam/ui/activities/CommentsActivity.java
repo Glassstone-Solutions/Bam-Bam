@@ -28,7 +28,7 @@ import butterknife.InjectView;
 import io.realm.Realm;
 import io.realm.RealmList;
 import ng.codehaven.bambam.R;
-import ng.codehaven.bambam.adapters.CommentsAdapter;
+import ng.codehaven.bambam.ui.adapters.CommentsAdapter;
 import ng.codehaven.bambam.models.Comment;
 import ng.codehaven.bambam.models.Track;
 import ng.codehaven.bambam.services.GetCommentsService;

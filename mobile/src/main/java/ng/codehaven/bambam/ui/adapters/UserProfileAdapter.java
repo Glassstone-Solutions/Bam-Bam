@@ -1,8 +1,7 @@
-package ng.codehaven.bambam.adapters;
+package ng.codehaven.bambam.ui.adapters;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -15,7 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
-import com.facebook.login.widget.ProfilePictureView;
 import com.parse.ParseUser;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;

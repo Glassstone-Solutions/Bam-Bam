@@ -5,7 +5,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -36,9 +35,8 @@ import java.util.List;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import ng.codehaven.bambam.R;
-import ng.codehaven.bambam.adapters.FeedAdapter;
+import ng.codehaven.bambam.ui.adapters.FeedAdapter;
 import ng.codehaven.bambam.models.Track;
-import ng.codehaven.bambam.services.MusicService;
 import ng.codehaven.bambam.services.UploadTuneService;
 import ng.codehaven.bambam.ui.activities.CommentsActivity;
 

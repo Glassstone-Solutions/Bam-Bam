@@ -1,4 +1,4 @@
-package ng.codehaven.bambam.adapters;
+package ng.codehaven.bambam.ui.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

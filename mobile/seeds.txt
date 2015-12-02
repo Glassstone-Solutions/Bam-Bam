@@ -26489,201 +26489,201 @@ ng.codehaven.bambam.R$styleable: void <clinit>()
 ng.codehaven.bambam.R$xml
 ng.codehaven.bambam.R$xml: int android_wear_micro_apk
 ng.codehaven.bambam.R$xml: R$xml()
-ng.codehaven.bambam.adapters.FeedAdapter
-ng.codehaven.bambam.adapters.FeedAdapter: android.view.animation.DecelerateInterpolator DECCELERATE_INTERPOLATOR
-ng.codehaven.bambam.adapters.FeedAdapter: android.view.animation.AccelerateInterpolator ACCELERATE_INTERPOLATOR
-ng.codehaven.bambam.adapters.FeedAdapter: android.view.animation.OvershootInterpolator OVERSHOOT_INTERPOLATOR
-ng.codehaven.bambam.adapters.FeedAdapter: int ANIMATED_ITEMS_COUNT
-ng.codehaven.bambam.adapters.FeedAdapter: java.util.Map likesCount
-ng.codehaven.bambam.adapters.FeedAdapter: java.util.Map likeAnimations
-ng.codehaven.bambam.adapters.FeedAdapter: java.util.ArrayList likedPositions
-ng.codehaven.bambam.adapters.FeedAdapter: android.content.Context context
-ng.codehaven.bambam.adapters.FeedAdapter: int lastAnimatedPosition
-ng.codehaven.bambam.adapters.FeedAdapter: int itemsCount
-ng.codehaven.bambam.adapters.FeedAdapter: boolean animateItems
-ng.codehaven.bambam.adapters.FeedAdapter: ng.codehaven.bambam.adapters.FeedAdapter$OnFeedItemClickListener onFeedItemClickListener
-ng.codehaven.bambam.adapters.FeedAdapter: java.util.List mTracks
-ng.codehaven.bambam.adapters.FeedAdapter: FeedAdapter(android.content.Context)
-ng.codehaven.bambam.adapters.FeedAdapter: FeedAdapter(android.content.Context,java.util.List)
-ng.codehaven.bambam.adapters.FeedAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-ng.codehaven.bambam.adapters.FeedAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
-ng.codehaven.bambam.adapters.FeedAdapter: android.text.SpannableString getSpannableString(java.lang.String)
-ng.codehaven.bambam.adapters.FeedAdapter: void runEnterAnimation(android.view.View,int)
-ng.codehaven.bambam.adapters.FeedAdapter: int getItemCount()
-ng.codehaven.bambam.adapters.FeedAdapter: void onClick(android.view.View)
-ng.codehaven.bambam.adapters.FeedAdapter: bolts.Task getAsync(com.parse.ParseObject)
-ng.codehaven.bambam.adapters.FeedAdapter: void doLike(int)
-ng.codehaven.bambam.adapters.FeedAdapter: void updateLikesCounter(ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder,boolean)
-ng.codehaven.bambam.adapters.FeedAdapter: void updateHeartButton(ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder,boolean)
-ng.codehaven.bambam.adapters.FeedAdapter: void animatePhotoLike(ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder)
-ng.codehaven.bambam.adapters.FeedAdapter: void resetLikeAnimationState(ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder)
-ng.codehaven.bambam.adapters.FeedAdapter: void updateItems(boolean)
-ng.codehaven.bambam.adapters.FeedAdapter: void fillLikesWithRandomValues()
-ng.codehaven.bambam.adapters.FeedAdapter: void setOnFeedItemClickListener(ng.codehaven.bambam.adapters.FeedAdapter$OnFeedItemClickListener)
-ng.codehaven.bambam.adapters.FeedAdapter: java.util.ArrayList getSpans(java.lang.String,char)
-ng.codehaven.bambam.adapters.FeedAdapter: void add(ng.codehaven.bambam.models.Track)
-ng.codehaven.bambam.adapters.FeedAdapter: java.util.List access$000(ng.codehaven.bambam.adapters.FeedAdapter)
-ng.codehaven.bambam.adapters.FeedAdapter: void access$100(ng.codehaven.bambam.adapters.FeedAdapter,ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder)
-ng.codehaven.bambam.adapters.FeedAdapter: void <clinit>()
-ng.codehaven.bambam.adapters.FeedAdapter$1
-ng.codehaven.bambam.adapters.FeedAdapter$1: bolts.Task$TaskCompletionSource val$tcs
-ng.codehaven.bambam.adapters.FeedAdapter$1: com.parse.ParseObject val$p
-ng.codehaven.bambam.adapters.FeedAdapter$1: ng.codehaven.bambam.adapters.FeedAdapter this$0
-ng.codehaven.bambam.adapters.FeedAdapter$1: FeedAdapter$1(ng.codehaven.bambam.adapters.FeedAdapter,bolts.Task$TaskCompletionSource,com.parse.ParseObject)
-ng.codehaven.bambam.adapters.FeedAdapter$1: void done(com.parse.ParseException)
-ng.codehaven.bambam.adapters.FeedAdapter$1: void done(java.lang.Throwable)
-ng.codehaven.bambam.adapters.FeedAdapter$2
-ng.codehaven.bambam.adapters.FeedAdapter$2: int val$i
-ng.codehaven.bambam.adapters.FeedAdapter$2: ng.codehaven.bambam.adapters.FeedAdapter this$0
-ng.codehaven.bambam.adapters.FeedAdapter$2: FeedAdapter$2(ng.codehaven.bambam.adapters.FeedAdapter,int)
-ng.codehaven.bambam.adapters.FeedAdapter$2: java.lang.Object then(bolts.Task)
-ng.codehaven.bambam.adapters.FeedAdapter$3
-ng.codehaven.bambam.adapters.FeedAdapter$3: ng.codehaven.bambam.adapters.FeedAdapter this$0
-ng.codehaven.bambam.adapters.FeedAdapter$3: FeedAdapter$3(ng.codehaven.bambam.adapters.FeedAdapter)
-ng.codehaven.bambam.adapters.FeedAdapter$3: bolts.Task then(bolts.Task)
-ng.codehaven.bambam.adapters.FeedAdapter$3: java.lang.Object then(bolts.Task)
-ng.codehaven.bambam.adapters.FeedAdapter$4
-ng.codehaven.bambam.adapters.FeedAdapter$4: ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder val$holder
-ng.codehaven.bambam.adapters.FeedAdapter$4: ng.codehaven.bambam.adapters.FeedAdapter this$0
-ng.codehaven.bambam.adapters.FeedAdapter$4: FeedAdapter$4(ng.codehaven.bambam.adapters.FeedAdapter,ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder)
-ng.codehaven.bambam.adapters.FeedAdapter$4: void onAnimationStart(android.animation.Animator)
-ng.codehaven.bambam.adapters.FeedAdapter$5
-ng.codehaven.bambam.adapters.FeedAdapter$5: ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder val$holder
-ng.codehaven.bambam.adapters.FeedAdapter$5: ng.codehaven.bambam.adapters.FeedAdapter this$0
-ng.codehaven.bambam.adapters.FeedAdapter$5: FeedAdapter$5(ng.codehaven.bambam.adapters.FeedAdapter,ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder)
-ng.codehaven.bambam.adapters.FeedAdapter$5: void onAnimationEnd(android.animation.Animator)
-ng.codehaven.bambam.adapters.FeedAdapter$6
-ng.codehaven.bambam.adapters.FeedAdapter$6: ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder val$holder
-ng.codehaven.bambam.adapters.FeedAdapter$6: ng.codehaven.bambam.adapters.FeedAdapter this$0
-ng.codehaven.bambam.adapters.FeedAdapter$6: FeedAdapter$6(ng.codehaven.bambam.adapters.FeedAdapter,ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder)
-ng.codehaven.bambam.adapters.FeedAdapter$6: void onAnimationEnd(android.animation.Animator)
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageView ivFeedCenter
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageButton btnComments
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageButton btnLike
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageButton btnMore
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: android.view.View vBgLike
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageView ivLike
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: android.widget.TextSwitcher tsLikesCounter
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: ng.codehaven.bambam.ui.views.BezelImageView ivUserProfile
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mDesc
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mUsernameTv
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mTS
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder: FeedAdapter$CellFeedViewHolder(android.view.View)
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder$$ViewInjector
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder$$ViewInjector: FeedAdapter$CellFeedViewHolder$$ViewInjector()
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder,java.lang.Object)
-ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.adapters.FeedAdapter$CellFeedViewHolder)
-ng.codehaven.bambam.adapters.FeedAdapter$OnFeedItemClickListener
-ng.codehaven.bambam.adapters.FeedAdapter$OnFeedItemClickListener: void onCommentsClick(android.view.View,int)
-ng.codehaven.bambam.adapters.FeedAdapter$OnFeedItemClickListener: void onMoreClick(android.view.View,int)
-ng.codehaven.bambam.adapters.FeedAdapter$OnFeedItemClickListener: void onProfileClick(android.view.View)
-ng.codehaven.bambam.adapters.TrackChooserAdapter
-ng.codehaven.bambam.adapters.TrackChooserAdapter: android.content.Context mContext
-ng.codehaven.bambam.adapters.TrackChooserAdapter: java.util.List mTracks
-ng.codehaven.bambam.adapters.TrackChooserAdapter: android.database.Cursor mCursor
-ng.codehaven.bambam.adapters.TrackChooserAdapter: int count
-ng.codehaven.bambam.adapters.TrackChooserAdapter: boolean fromCursor
-ng.codehaven.bambam.adapters.TrackChooserAdapter: ng.codehaven.bambam.adapters.TrackChooserAdapter$OnTrackItemClickListener onTrackItemClickListener
-ng.codehaven.bambam.adapters.TrackChooserAdapter: TrackChooserAdapter(android.content.Context,android.database.Cursor)
-ng.codehaven.bambam.adapters.TrackChooserAdapter: TrackChooserAdapter(android.content.Context,java.util.List)
-ng.codehaven.bambam.adapters.TrackChooserAdapter: void setOnTrackItemClickListener(ng.codehaven.bambam.adapters.TrackChooserAdapter$OnTrackItemClickListener)
-ng.codehaven.bambam.adapters.TrackChooserAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-ng.codehaven.bambam.adapters.TrackChooserAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
-ng.codehaven.bambam.adapters.TrackChooserAdapter: void bindFromTracks(ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder,int)
-ng.codehaven.bambam.adapters.TrackChooserAdapter: void bindFromCursor(ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder,int)
-ng.codehaven.bambam.adapters.TrackChooserAdapter: int getItemCount()
-ng.codehaven.bambam.adapters.TrackChooserAdapter: void onClick(android.view.View)
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder: android.widget.LinearLayout mRoot
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder: android.widget.ImageView mArt
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mTitle
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mArtist
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mDuration
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder: ng.codehaven.bambam.ui.views.SquaredFrameLayout mArtWrap
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder: TrackChooserAdapter$CellTrackViewHolder(android.view.View)
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder$$ViewInjector
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder$$ViewInjector: TrackChooserAdapter$CellTrackViewHolder$$ViewInjector()
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder,java.lang.Object)
-ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.adapters.TrackChooserAdapter$CellTrackViewHolder)
-ng.codehaven.bambam.adapters.TrackChooserAdapter$OnTrackItemClickListener
-ng.codehaven.bambam.adapters.TrackChooserAdapter$OnTrackItemClickListener: void onCommentsClick(android.view.View,int)
-ng.codehaven.bambam.adapters.TrackChooserAdapter$OnTrackItemClickListener: void onTrackClick(android.view.View,int)
-ng.codehaven.bambam.adapters.TrackChooserAdapter$OnTrackItemClickListener: void onProfileClick(android.view.View)
-ng.codehaven.bambam.adapters.UserProfileAdapter
-ng.codehaven.bambam.adapters.UserProfileAdapter: int TYPE_PROFILE_HEADER
-ng.codehaven.bambam.adapters.UserProfileAdapter: int TYPE_PROFILE_OPTIONS
-ng.codehaven.bambam.adapters.UserProfileAdapter: int TYPE_EMPTY
-ng.codehaven.bambam.adapters.UserProfileAdapter: int TYPE_TRACK
-ng.codehaven.bambam.adapters.UserProfileAdapter: int MIN_ITEMS_COUNT
-ng.codehaven.bambam.adapters.UserProfileAdapter: android.content.Context context
-ng.codehaven.bambam.adapters.UserProfileAdapter: int cellSize
-ng.codehaven.bambam.adapters.UserProfileAdapter: java.util.List tracks
-ng.codehaven.bambam.adapters.UserProfileAdapter: boolean isMyProfile
-ng.codehaven.bambam.adapters.UserProfileAdapter: java.lang.String mUserId
-ng.codehaven.bambam.adapters.UserProfileAdapter: com.parse.ParseUser mUser
-ng.codehaven.bambam.adapters.UserProfileAdapter: android.content.SharedPreferences sharedPref
-ng.codehaven.bambam.adapters.UserProfileAdapter: java.lang.String defaultName
-ng.codehaven.bambam.adapters.UserProfileAdapter: java.lang.String username
-ng.codehaven.bambam.adapters.UserProfileAdapter: java.lang.String aboutMe
-ng.codehaven.bambam.adapters.UserProfileAdapter: boolean hasUsername
-ng.codehaven.bambam.adapters.UserProfileAdapter: boolean hasTrack
-ng.codehaven.bambam.adapters.UserProfileAdapter: ng.codehaven.bambam.adapters.UserProfileAdapter$UserProfileHandler uh
-ng.codehaven.bambam.adapters.UserProfileAdapter: UserProfileAdapter(android.content.Context,java.util.List,boolean,com.parse.ParseUser)
-ng.codehaven.bambam.adapters.UserProfileAdapter: void setUserProfileHandler(ng.codehaven.bambam.adapters.UserProfileAdapter$UserProfileHandler)
-ng.codehaven.bambam.adapters.UserProfileAdapter: int getItemViewType(int)
-ng.codehaven.bambam.adapters.UserProfileAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-ng.codehaven.bambam.adapters.UserProfileAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
-ng.codehaven.bambam.adapters.UserProfileAdapter: void bindEmpty(ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder)
-ng.codehaven.bambam.adapters.UserProfileAdapter: void bindProfileHeader(ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder)
-ng.codehaven.bambam.adapters.UserProfileAdapter: void bindProfileOptions(ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder)
-ng.codehaven.bambam.adapters.UserProfileAdapter: void bindTrack(ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder,int)
-ng.codehaven.bambam.adapters.UserProfileAdapter: int getItemCount()
-ng.codehaven.bambam.adapters.UserProfileAdapter: void setUsername(android.widget.TextView)
-ng.codehaven.bambam.adapters.UserProfileAdapter: void setAbout(android.widget.TextView)
-ng.codehaven.bambam.adapters.UserProfileAdapter: void remove(int)
-ng.codehaven.bambam.adapters.UserProfileAdapter$1
-ng.codehaven.bambam.adapters.UserProfileAdapter$1: ng.codehaven.bambam.adapters.UserProfileAdapter this$0
-ng.codehaven.bambam.adapters.UserProfileAdapter$1: UserProfileAdapter$1(ng.codehaven.bambam.adapters.UserProfileAdapter)
-ng.codehaven.bambam.adapters.UserProfileAdapter$1: void onSuccess()
-ng.codehaven.bambam.adapters.UserProfileAdapter$1: void onError()
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder: android.widget.TextView mNoTuneLabel
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder: android.widget.RelativeLayout mRoot
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder: android.widget.ImageView mArt
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder: UserProfileAdapter$NoTunesViewHolder(android.view.View)
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder$$ViewInjector
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder$$ViewInjector: UserProfileAdapter$NoTunesViewHolder$$ViewInjector()
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder,java.lang.Object)
-ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.adapters.UserProfileAdapter$NoTunesViewHolder)
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder: ng.codehaven.bambam.ui.views.BezelImageView ivUserProfilePhoto
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder: UserProfileAdapter$ProfileHeaderViewHolder(android.view.View)
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector: UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector()
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder,java.lang.Object)
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileHeaderViewHolder)
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mUsername
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mAboutMe
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mTunes
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mFolloers
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mFollowing
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder: UserProfileAdapter$ProfileOptionsViewHolder(android.view.View)
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector: UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector()
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder,java.lang.Object)
-ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.adapters.UserProfileAdapter$ProfileOptionsViewHolder)
-ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder
-ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder: android.widget.FrameLayout flRoot
-ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder: android.widget.ImageView ivPhoto
-ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder: UserProfileAdapter$TrackViewHolder(android.view.View)
-ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder$$ViewInjector
-ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder$$ViewInjector: UserProfileAdapter$TrackViewHolder$$ViewInjector()
-ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder,java.lang.Object)
-ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.adapters.UserProfileAdapter$TrackViewHolder)
-ng.codehaven.bambam.adapters.UserProfileAdapter$UserProfileHandler
-ng.codehaven.bambam.adapters.UserProfileAdapter$UserProfileHandler: void onItemsPresent(int)
+ng.codehaven.bambam.ui.adapters.FeedAdapter
+ng.codehaven.bambam.ui.adapters.FeedAdapter: android.view.animation.DecelerateInterpolator DECCELERATE_INTERPOLATOR
+ng.codehaven.bambam.ui.adapters.FeedAdapter: android.view.animation.AccelerateInterpolator ACCELERATE_INTERPOLATOR
+ng.codehaven.bambam.ui.adapters.FeedAdapter: android.view.animation.OvershootInterpolator OVERSHOOT_INTERPOLATOR
+ng.codehaven.bambam.ui.adapters.FeedAdapter: int ANIMATED_ITEMS_COUNT
+ng.codehaven.bambam.ui.adapters.FeedAdapter: java.util.Map likesCount
+ng.codehaven.bambam.ui.adapters.FeedAdapter: java.util.Map likeAnimations
+ng.codehaven.bambam.ui.adapters.FeedAdapter: java.util.ArrayList likedPositions
+ng.codehaven.bambam.ui.adapters.FeedAdapter: android.content.Context context
+ng.codehaven.bambam.ui.adapters.FeedAdapter: int lastAnimatedPosition
+ng.codehaven.bambam.ui.adapters.FeedAdapter: int itemsCount
+ng.codehaven.bambam.ui.adapters.FeedAdapter: boolean animateItems
+ng.codehaven.bambam.ui.adapters.FeedAdapter: ng.codehaven.bambam.ui.adapters.FeedAdapter$OnFeedItemClickListener onFeedItemClickListener
+ng.codehaven.bambam.ui.adapters.FeedAdapter: java.util.List mTracks
+ng.codehaven.bambam.ui.adapters.FeedAdapter: FeedAdapter(android.content.Context)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: FeedAdapter(android.content.Context,java.util.List)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: android.text.SpannableString getSpannableString(java.lang.String)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void runEnterAnimation(android.view.View,int)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: int getItemCount()
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void onClick(android.view.View)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: bolts.Task getAsync(com.parse.ParseObject)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void doLike(int)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void updateLikesCounter(ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder,boolean)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void updateHeartButton(ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder,boolean)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void animatePhotoLike(ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void resetLikeAnimationState(ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void updateItems(boolean)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void fillLikesWithRandomValues()
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void setOnFeedItemClickListener(ng.codehaven.bambam.ui.adapters.FeedAdapter$OnFeedItemClickListener)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: java.util.ArrayList getSpans(java.lang.String,char)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void add(ng.codehaven.bambam.models.Track)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: java.util.List access$000(ng.codehaven.bambam.ui.adapters.FeedAdapter)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void access$100(ng.codehaven.bambam.ui.adapters.FeedAdapter,ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder)
+ng.codehaven.bambam.ui.adapters.FeedAdapter: void <clinit>()
+ng.codehaven.bambam.ui.adapters.FeedAdapter$1
+ng.codehaven.bambam.ui.adapters.FeedAdapter$1: bolts.Task$TaskCompletionSource val$tcs
+ng.codehaven.bambam.ui.adapters.FeedAdapter$1: com.parse.ParseObject val$p
+ng.codehaven.bambam.ui.adapters.FeedAdapter$1: ng.codehaven.bambam.ui.adapters.FeedAdapter this$0
+ng.codehaven.bambam.ui.adapters.FeedAdapter$1: FeedAdapter$1(ng.codehaven.bambam.ui.adapters.FeedAdapter,bolts.Task$TaskCompletionSource,com.parse.ParseObject)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$1: void done(com.parse.ParseException)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$1: void done(java.lang.Throwable)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$2
+ng.codehaven.bambam.ui.adapters.FeedAdapter$2: int val$i
+ng.codehaven.bambam.ui.adapters.FeedAdapter$2: ng.codehaven.bambam.ui.adapters.FeedAdapter this$0
+ng.codehaven.bambam.ui.adapters.FeedAdapter$2: FeedAdapter$2(ng.codehaven.bambam.ui.adapters.FeedAdapter,int)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$2: java.lang.Object then(bolts.Task)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$3
+ng.codehaven.bambam.ui.adapters.FeedAdapter$3: ng.codehaven.bambam.ui.adapters.FeedAdapter this$0
+ng.codehaven.bambam.ui.adapters.FeedAdapter$3: FeedAdapter$3(ng.codehaven.bambam.ui.adapters.FeedAdapter)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$3: bolts.Task then(bolts.Task)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$3: java.lang.Object then(bolts.Task)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$4
+ng.codehaven.bambam.ui.adapters.FeedAdapter$4: ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder val$holder
+ng.codehaven.bambam.ui.adapters.FeedAdapter$4: ng.codehaven.bambam.ui.adapters.FeedAdapter this$0
+ng.codehaven.bambam.ui.adapters.FeedAdapter$4: FeedAdapter$4(ng.codehaven.bambam.ui.adapters.FeedAdapter,ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$4: void onAnimationStart(android.animation.Animator)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$5
+ng.codehaven.bambam.ui.adapters.FeedAdapter$5: ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder val$holder
+ng.codehaven.bambam.ui.adapters.FeedAdapter$5: ng.codehaven.bambam.ui.adapters.FeedAdapter this$0
+ng.codehaven.bambam.ui.adapters.FeedAdapter$5: FeedAdapter$5(ng.codehaven.bambam.ui.adapters.FeedAdapter,ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$5: void onAnimationEnd(android.animation.Animator)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$6
+ng.codehaven.bambam.ui.adapters.FeedAdapter$6: ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder val$holder
+ng.codehaven.bambam.ui.adapters.FeedAdapter$6: ng.codehaven.bambam.ui.adapters.FeedAdapter this$0
+ng.codehaven.bambam.ui.adapters.FeedAdapter$6: FeedAdapter$6(ng.codehaven.bambam.ui.adapters.FeedAdapter,ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$6: void onAnimationEnd(android.animation.Animator)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageView ivFeedCenter
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageButton btnComments
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageButton btnLike
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageButton btnMore
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: android.view.View vBgLike
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: android.widget.ImageView ivLike
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: android.widget.TextSwitcher tsLikesCounter
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: ng.codehaven.bambam.ui.views.BezelImageView ivUserProfile
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mDesc
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mUsernameTv
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mTS
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder: FeedAdapter$CellFeedViewHolder(android.view.View)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder$$ViewInjector
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder$$ViewInjector: FeedAdapter$CellFeedViewHolder$$ViewInjector()
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder,java.lang.Object)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.ui.adapters.FeedAdapter$CellFeedViewHolder)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$OnFeedItemClickListener
+ng.codehaven.bambam.ui.adapters.FeedAdapter$OnFeedItemClickListener: void onCommentsClick(android.view.View,int)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$OnFeedItemClickListener: void onMoreClick(android.view.View,int)
+ng.codehaven.bambam.ui.adapters.FeedAdapter$OnFeedItemClickListener: void onProfileClick(android.view.View)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: android.content.Context mContext
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: java.util.List mTracks
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: android.database.Cursor mCursor
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: int count
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: boolean fromCursor
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$OnTrackItemClickListener onTrackItemClickListener
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: TrackChooserAdapter(android.content.Context,android.database.Cursor)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: TrackChooserAdapter(android.content.Context,java.util.List)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: void setOnTrackItemClickListener(ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$OnTrackItemClickListener)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: void bindFromTracks(ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder,int)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: void bindFromCursor(ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder,int)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: int getItemCount()
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter: void onClick(android.view.View)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder: android.widget.LinearLayout mRoot
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder: android.widget.ImageView mArt
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mTitle
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mArtist
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder: ng.codehaven.bambam.ui.views.CustomTextView mDuration
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder: ng.codehaven.bambam.ui.views.SquaredFrameLayout mArtWrap
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder: TrackChooserAdapter$CellTrackViewHolder(android.view.View)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder$$ViewInjector
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder$$ViewInjector: TrackChooserAdapter$CellTrackViewHolder$$ViewInjector()
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder,java.lang.Object)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$CellTrackViewHolder)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$OnTrackItemClickListener
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$OnTrackItemClickListener: void onCommentsClick(android.view.View,int)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$OnTrackItemClickListener: void onTrackClick(android.view.View,int)
+ng.codehaven.bambam.ui.adapters.TrackChooserAdapter$OnTrackItemClickListener: void onProfileClick(android.view.View)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: int TYPE_PROFILE_HEADER
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: int TYPE_PROFILE_OPTIONS
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: int TYPE_EMPTY
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: int TYPE_TRACK
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: int MIN_ITEMS_COUNT
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: android.content.Context context
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: int cellSize
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: java.util.List tracks
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: boolean isMyProfile
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: java.lang.String mUserId
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: com.parse.ParseUser mUser
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: android.content.SharedPreferences sharedPref
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: java.lang.String defaultName
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: java.lang.String username
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: java.lang.String aboutMe
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: boolean hasUsername
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: boolean hasTrack
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: ng.codehaven.bambam.ui.adapters.UserProfileAdapter$UserProfileHandler uh
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: UserProfileAdapter(android.content.Context,java.util.List,boolean,com.parse.ParseUser)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void setUserProfileHandler(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$UserProfileHandler)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: int getItemViewType(int)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void bindEmpty(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void bindProfileHeader(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void bindProfileOptions(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void bindTrack(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder,int)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: int getItemCount()
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void setUsername(android.widget.TextView)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void setAbout(android.widget.TextView)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter: void remove(int)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$1
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$1: ng.codehaven.bambam.ui.adapters.UserProfileAdapter this$0
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$1: UserProfileAdapter$1(ng.codehaven.bambam.ui.adapters.UserProfileAdapter)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$1: void onSuccess()
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$1: void onError()
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder: android.widget.TextView mNoTuneLabel
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder: android.widget.RelativeLayout mRoot
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder: android.widget.ImageView mArt
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder: UserProfileAdapter$NoTunesViewHolder(android.view.View)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder$$ViewInjector
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder$$ViewInjector: UserProfileAdapter$NoTunesViewHolder$$ViewInjector()
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder,java.lang.Object)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$NoTunesViewHolder)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder: ng.codehaven.bambam.ui.views.BezelImageView ivUserProfilePhoto
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder: UserProfileAdapter$ProfileHeaderViewHolder(android.view.View)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector: UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector()
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder,java.lang.Object)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileHeaderViewHolder)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mUsername
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mAboutMe
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mTunes
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mFolloers
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder: android.widget.TextView mFollowing
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder: UserProfileAdapter$ProfileOptionsViewHolder(android.view.View)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector: UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector()
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder,java.lang.Object)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$ProfileOptionsViewHolder)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder: android.widget.FrameLayout flRoot
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder: android.widget.ImageView ivPhoto
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder: UserProfileAdapter$TrackViewHolder(android.view.View)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder$$ViewInjector
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder$$ViewInjector: UserProfileAdapter$TrackViewHolder$$ViewInjector()
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder,java.lang.Object)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder$$ViewInjector: void reset(ng.codehaven.bambam.ui.adapters.UserProfileAdapter$TrackViewHolder)
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$UserProfileHandler
+ng.codehaven.bambam.ui.adapters.UserProfileAdapter$UserProfileHandler: void onItemsPresent(int)
 ng.codehaven.bambam.models.Activities
 ng.codehaven.bambam.models.Activities: Activities()
 ng.codehaven.bambam.models.Activities: java.lang.String getActivityType()
@@ -27231,7 +27231,7 @@ ng.codehaven.bambam.ui.fragments.ChooseArtworkFragment$OnFragmentInteractionList
 ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment
 ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment: android.support.v7.widget.RecyclerView mRecycler
 ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment: android.os.Bundle mBundle
-ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment: ng.codehaven.bambam.adapters.TrackChooserAdapter mAdapter
+ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment: ng.codehaven.bambam.ui.adapters.TrackChooserAdapter mAdapter
 ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment: android.database.Cursor c
 ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment: ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment$OnFragmentInteractionListener mListener
 ng.codehaven.bambam.ui.fragments.ChooseMP3Fragment: ChooseMP3Fragment()
@@ -27259,7 +27259,7 @@ ng.codehaven.bambam.ui.fragments.PopularFragment: android.view.View onCreateView
 ng.codehaven.bambam.ui.fragments.ProfileFragment
 ng.codehaven.bambam.ui.fragments.ProfileFragment: android.support.v7.widget.RecyclerView mRecycler
 ng.codehaven.bambam.ui.fragments.ProfileFragment: android.support.v4.widget.SwipeRefreshLayout mSwipeLayout
-ng.codehaven.bambam.ui.fragments.ProfileFragment: ng.codehaven.bambam.adapters.UserProfileAdapter adapter
+ng.codehaven.bambam.ui.fragments.ProfileFragment: ng.codehaven.bambam.ui.adapters.UserProfileAdapter adapter
 ng.codehaven.bambam.ui.fragments.ProfileFragment: java.util.List t
 ng.codehaven.bambam.ui.fragments.ProfileFragment: boolean isInitialized
 ng.codehaven.bambam.ui.fragments.ProfileFragment: boolean done
@@ -27274,9 +27274,9 @@ ng.codehaven.bambam.ui.fragments.ProfileFragment: void onResume()
 ng.codehaven.bambam.ui.fragments.ProfileFragment: void onItemsPresent(int)
 ng.codehaven.bambam.ui.fragments.ProfileFragment: void onRefresh()
 ng.codehaven.bambam.ui.fragments.ProfileFragment: java.util.List access$002(ng.codehaven.bambam.ui.fragments.ProfileFragment,java.util.List)
-ng.codehaven.bambam.ui.fragments.ProfileFragment: ng.codehaven.bambam.adapters.UserProfileAdapter access$102(ng.codehaven.bambam.ui.fragments.ProfileFragment,ng.codehaven.bambam.adapters.UserProfileAdapter)
+ng.codehaven.bambam.ui.fragments.ProfileFragment: ng.codehaven.bambam.ui.adapters.UserProfileAdapter access$102(ng.codehaven.bambam.ui.fragments.ProfileFragment,ng.codehaven.bambam.ui.adapters.UserProfileAdapter)
 ng.codehaven.bambam.ui.fragments.ProfileFragment: java.util.List access$000(ng.codehaven.bambam.ui.fragments.ProfileFragment)
-ng.codehaven.bambam.ui.fragments.ProfileFragment: ng.codehaven.bambam.adapters.UserProfileAdapter access$100(ng.codehaven.bambam.ui.fragments.ProfileFragment)
+ng.codehaven.bambam.ui.fragments.ProfileFragment: ng.codehaven.bambam.ui.adapters.UserProfileAdapter access$100(ng.codehaven.bambam.ui.fragments.ProfileFragment)
 ng.codehaven.bambam.ui.fragments.ProfileFragment: boolean access$202(ng.codehaven.bambam.ui.fragments.ProfileFragment,boolean)
 ng.codehaven.bambam.ui.fragments.ProfileFragment: void access$300(ng.codehaven.bambam.ui.fragments.ProfileFragment,com.parse.ParseUser)
 ng.codehaven.bambam.ui.fragments.ProfileFragment$$ViewInjector
@@ -27327,7 +27327,7 @@ ng.codehaven.bambam.ui.fragments.TrackDetailsFragment$OnDetailsFragmentInterface
 ng.codehaven.bambam.ui.fragments.TuneListFragment
 ng.codehaven.bambam.ui.fragments.TuneListFragment: android.support.v7.widget.RecyclerView mRecyclerView
 ng.codehaven.bambam.ui.fragments.TuneListFragment: android.support.v4.widget.SwipeRefreshLayout mRefresh
-ng.codehaven.bambam.ui.fragments.TuneListFragment: ng.codehaven.bambam.adapters.FeedAdapter feedAdapter
+ng.codehaven.bambam.ui.fragments.TuneListFragment: ng.codehaven.bambam.ui.adapters.FeedAdapter feedAdapter
 ng.codehaven.bambam.ui.fragments.TuneListFragment: java.util.List mTunes
 ng.codehaven.bambam.ui.fragments.TuneListFragment: org.json.JSONObject cache
 ng.codehaven.bambam.ui.fragments.TuneListFragment: android.content.SharedPreferences sharedPref
@@ -27341,7 +27341,7 @@ ng.codehaven.bambam.ui.fragments.TuneListFragment: void onCommentsClick(android.
 ng.codehaven.bambam.ui.fragments.TuneListFragment: void onMoreClick(android.view.View,int)
 ng.codehaven.bambam.ui.fragments.TuneListFragment: void onProfileClick(android.view.View)
 ng.codehaven.bambam.ui.fragments.TuneListFragment: void onRefresh()
-ng.codehaven.bambam.ui.fragments.TuneListFragment: ng.codehaven.bambam.adapters.FeedAdapter access$000(ng.codehaven.bambam.ui.fragments.TuneListFragment)
+ng.codehaven.bambam.ui.fragments.TuneListFragment: ng.codehaven.bambam.ui.adapters.FeedAdapter access$000(ng.codehaven.bambam.ui.fragments.TuneListFragment)
 ng.codehaven.bambam.ui.fragments.TuneListFragment: org.json.JSONObject access$100(ng.codehaven.bambam.ui.fragments.TuneListFragment)
 ng.codehaven.bambam.ui.fragments.TuneListFragment: android.content.SharedPreferences access$200(ng.codehaven.bambam.ui.fragments.TuneListFragment)
 ng.codehaven.bambam.ui.fragments.TuneListFragment$1
